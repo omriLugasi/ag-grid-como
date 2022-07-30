@@ -1,6 +1,9 @@
 const columnDefs = [
-  { field: "bool",
+  { field: "switch",
     ...Romo.switchCell,
+    editable: true },
+  { field: "checkmark",
+    ...Romo.checkmarkCell,
     editable: true },
   { field: "model" },
   { field: "price" }
@@ -8,9 +11,10 @@ const columnDefs = [
 
 // specify the data
 const rowData = [
-  { bool: false, model: "Celica", price: 35000 },
-  { bool: true, model: "Mondeo", price: 32000 },
-  { bool: false, model: "Boxster", price: 72000 }
+  { switch: false, checkmark: false, model: "Celica", price: 35000 },
+  { switch: false, checkmark: true, model: "Celica", price: 35000 },
+  { switch: true, model: "Mondeo", price: 32000 },
+  { switch: false, model: "Boxster", price: 72000 }
 ];
 
 // let the grid know which columns and what data to use
