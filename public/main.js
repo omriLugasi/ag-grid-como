@@ -1,7 +1,6 @@
 const columnDefs = [
   { field: "make",
-    cellRenderer: window.CustomSwitchRender,
-    cellEditor: window.CustomSwitchEditor,
+    ...Romo.switchCell,
     editable: true },
   { field: "model" },
   { field: "price" }
