@@ -1,10 +1,12 @@
 import { switchCell } from './switch/index.js'
 import { checkmarkCell } from './checkmark/index.js'
+import { hyperLinkCell } from './hyperLink/index.js'
 
 
 export const agGridComoComponent = {
     switchCell,
-    checkmarkCell
+    checkmarkCell,
+    hyperLinkCell
 }
 
 

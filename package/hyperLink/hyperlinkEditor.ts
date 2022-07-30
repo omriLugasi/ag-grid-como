@@ -1,13 +1,10 @@
-
-
-export default class CustomSwitchEditor {
+export default class HyperlinkEditor {
     private container: any
     private value: any
     private randomId: string = Math.random().toString(16)
 
     init(params) {
         this.container = document.createElement('div');
-
         this.container.innerHTML = `
          <input type="checkbox" id="${this.randomId}" ${params.value ? 'checked="checked"' : ''} />
         `

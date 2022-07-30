@@ -5,8 +5,6 @@ export default class CheckmarkEditor {
 
     init(params) {
         this.container = document.createElement('div');
-
-        console.log(params)
         this.container.innerHTML = `
          <input type="checkbox" id="${this.randomId}" ${params.value ? 'checked="checked"' : ''} />
         `

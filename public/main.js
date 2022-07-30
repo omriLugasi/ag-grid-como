@@ -1,20 +1,34 @@
 const columnDefs = [
-  { field: "switch",
+  {
+    field: "switch",
     ...Romo.switchCell,
-    editable: true },
-  { field: "checkmark",
+    editable: true
+  },
+  {
+    field: "checkmark",
     ...Romo.checkmarkCell,
-    editable: true },
-  { field: "model" },
-  { field: "price" }
+    editable: true
+  },
+  {
+    field: "hyperLinkHref",
+    ...Romo.hyperLinkCell,
+    cellRendererParams: {
+      props: {
+        text: 'This is your link',
+      },
+    },
+    editable: true
+  },
+
 ];
 
 // specify the data
 const rowData = [
-  { switch: false, checkmark: false, model: "Celica", price: 35000 },
-  { switch: false, checkmark: true, model: "Celica", price: 35000 },
-  { switch: true, model: "Mondeo", price: 32000 },
-  { switch: false, model: "Boxster", price: 72000 }
+  {
+    switch: false,
+    checkmark: false,
+    hyperLinkHref: 'http://google.com'
+  }
 ];
 
 // let the grid know which columns and what data to use
