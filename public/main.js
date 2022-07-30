@@ -1,5 +1,5 @@
 const columnDefs = [
-  { field: "make",
+  { field: "bool",
     ...Romo.switchCell,
     editable: true },
   { field: "model" },
@@ -8,9 +8,9 @@ const columnDefs = [
 
 // specify the data
 const rowData = [
-  { make: "22/07/22", model: "Celica", price: 35000 },
-  { make: "22/07/22", model: "Mondeo", price: 32000 },
-  { make: "22/07/22", model: "Boxster", price: 72000 }
+  { bool: false, model: "Celica", price: 35000 },
+  { bool: true, model: "Mondeo", price: 32000 },
+  { bool: false, model: "Boxster", price: 72000 }
 ];
 
 // let the grid know which columns and what data to use

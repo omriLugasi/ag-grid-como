@@ -1,15 +1,21 @@
+
+
 export default class CustomSwitchEditor {
     private container: any
     private value: any
-
-    constructor() {}
+    private randomId: string = Math.random().toString(16)
 
     init(params) {
         this.container = document.createElement('div');
 
-        this.container.innerHTML = '<button>X</button>'
-        this.container.innerHTML += '<button>Y</button>'
+        console.log(params)
+        this.container.innerHTML = `
+         <input type="checkbox" id="${this.randomId}" ${params.value ? 'checked="checked"' : ''} />
+        `
+    }
 
+    onChange(event) {
+        this.value = event.target.checked
     }
 
 
@@ -19,7 +25,8 @@ export default class CustomSwitchEditor {
     }
 
     afterGuiAttached() {
-        this.container.focus();
+        this.container.focus()
+        document.getElementById(this.randomId).addEventListener('change', this.onChange.bind(this))
     }
 
     getValue() {
@@ -30,7 +37,7 @@ export default class CustomSwitchEditor {
     destroy() {}
 
     isPopup() {
-        return true;
+        return false;
     }
 
 }

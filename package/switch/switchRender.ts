@@ -4,7 +4,7 @@ export default class CustomSwitchRender {
     init(params) {
 
         this.eGui = document.createElement('div');
-        this.eGui.innerHTML = params.value === 'true' ? 'TRUE': 'FALSE';
+        this.eGui.innerHTML = params.value ? 'TRUE': 'FALSE';
 
     }
 
